@@ -1,0 +1,96 @@
+.header {
+  height: 120px;
+  background-image: linear-gradient(0, #fe6333, #f53e2d);
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+.list {
+  margin-top: 4px;
+  list-style: none;
+  padding-left: 0;
+}
+.list-item {
+  margin: 0 8px;
+  position: relative;
+}
+
+.list-item,
+.list-item-link {
+  display: inline-block;
+  font-size: 1.4rem;
+  color: var(--white-color);
+  text-decoration: none;
+  font-weight: 300;
+}
+.list-item,
+.list-item-link,
+.item-icon-link {
+  display: inline-flex;
+  align-items: center;
+}
+.list-item:hover,
+.list-item-link:hover,
+.item-icon-link:hover {
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+.list-item--strong {
+  font-weight: 500;
+}
+.list-item--display-qr:hover .list-item__qr{
+  display: block;
+}
+.list-item--separate::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 16px;
+  background-color: #fb9086;
+  right: -9px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.item-icon-link {
+  color: var(--white-color);
+  text-decoration: none;
+}
+
+.icon {
+  font-size: 1.8rem;
+  margin: 0 4px;
+}
+.list-item--no-pointer {
+  cursor: text;
+  color: var(--white-color);
+}
+
+/* Header QR code */
+.list-item__qr{
+  position: absolute;
+  width: 186px;
+  background-color: var(--white-color);
+  left: 0;
+  top: 100%;
+  padding: 8px;
+  border-radius: 2px;
+  display: none;
+}
+.list-item__qr-img{
+  width: 100%;
+}
+.list-item__platform{
+  display: flex;
+  justify-content: space-between;
+}
+.list-item__platform-link:nth-child(1){
+  margin-left: 11px;
+}
+.list-item__platform-link:nth-child(2){
+  margin-right: 11px;
+}
+.list-item__platform-img{
+  height: 16px;
+}
