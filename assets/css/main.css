@@ -42,6 +42,11 @@
 .list-item--display-qr:hover .list-item__qr {
   display: block;
 }
+
+.list-item--has-notify:hover .list__notify {
+  display: block;
+}
+
 .list-item--separate::after {
   content: "";
   display: block;
@@ -112,25 +117,117 @@
   right: 0;
   width: 404px;
   background-color: var(--white-color);
+  border: 1px solid rgb(229 229 229);
+  cursor: default;
+  transform-origin: 90% top;
+  animation: listNotifyGrowth ease-in 0.2s;
+  -webkit-animation: listNotifyGrowth ease-in 0.2s;
+  -ms-animation: listNotifyGrowth ease-in 0.2s;
+  -o-animation: listNotifyGrowth ease-in 0.2s;
+  -moz-animation: listNotifyGrowth ease-in 0.2s;
+  will-change: opacity, transform;
+  display: none;
+}
+
+.list__notify::before {
+  content: "";
+  border-width: 20px 27px;
+  border-style: solid;
+  border-color: transparent transparent var(--white-color) transparent;
+  position: absolute;
+  right: 4px;
+  top: -29px;
+}
+
+.list__notify::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 90px;
+  right: 0;
+  top: -16px;
+  height: 20px;
+}
+
+@keyframes listNotifyGrowth {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .notify-header {
+  height: 40px;
+  background-color: var(--white-color);
+}
+.notify-header h3 {
+  color: #999;
+  margin: 0 0 0 12px;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 40px;
+  user-select: none;
 }
 
 .notify-list {
+  padding-left: 0;
 }
 
 .notify-item {
+  display: flex;
+  background-color: rgba(238, 77, 45, 0.08);
 }
-
+.notify-item--viewed {
+  background-color: var(--white-color);
+}
+.notify-item:hover {
+  background-color: #f7f7f7;
+}
+.notify-link {
+  display: flex;
+  padding: 12px;
+  text-decoration: none;
+  width: 100%;
+}
 .notify-img {
+  width: 48px;
+  object-fit: contain;
 }
 
 .notify-info {
+  margin-left: 12px;
 }
 
 .notify-name {
+  display: block;
+  font-size: 1.4rem;
+  color: var(--black-color);
+  font-weight: 400;
+  line-height: 1.8rem;
 }
 
 .notify-description {
+  margin-top: 4px;
+  display: block;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  color: #756f6e;
+}
+
+.notify-footer {
+  display: flex;
+}
+
+.notify-footer-btn {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding: 8px 0px;
+  width: 100%;
+  text-align: center;
 }
