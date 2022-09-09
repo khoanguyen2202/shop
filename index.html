@@ -159,28 +159,64 @@
 
           <!-- SEARCH -->
           <div class="search">
-
             <div class="search__logo">
               <img
-                src="https://assets.website-files.com/61d746db24b5f01252d73a25/61d75a9667bec6d5af6cddde_T1%20Logo%20Red.svg"
+                src="./assets/img/nnmt.png"
                 loading="lazy"
-                alt="T1 Logo"
+                alt="nnmt"
                 class="search__logo-img"
               />
             </div>
 
             <div class="search__frame">
-              <input type="text" class="search__frame-input" placeholder="Nhập để tìm kiếm sản phẩm">
+              <div class="search__frame-input-wrap">
+
+                <input
+                  type="text"
+                  class="search__frame-input"
+                  placeholder="Nhập để tìm kiếm sản phẩm"
+                />
+
+                <!-- SEARCH HISTORY -->
+                <div class="search__frame-history">
+                  <h3 class="search__frame-history-heading">Lịch sử tìm kiếm</h3>
+                  <ul class="search__frame-history-list">
+                    <li class="search__frame-history-item">
+                      <a href="">Nguyễn Ngọc Minh Tú</a>
+                    </li>
+                    <li class="search__frame-history-item">
+                      <a href="">Tiên Nguyễn</a>
+                    </li>
+                    <li class="search__frame-history-item">
+                      <a href="">Ph Uyênn</a>
+                    </li>
+                    <li class="search__frame-history-item">
+                      <a href="">Lê Võ Ngọc Hân</a>
+                    </li>
+                    <li class="search__frame-history-item">
+                      <a href="">Thanh Thúy</a>
+                    </li>
+                    <li class="search__frame-history-item">
+                      <a href="">Ngọc Ánh 2k6</a>
+                    </li>
+                    <li class="search__frame-history-item">
+                      <a href="">Vân Anh</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
 
               <div class="search__frame-select">
-
                 <span class="search__frame-select-label">Trong Shop</span>
 
-                <i class="search__frame-select-icon fa-solid fa-chevron-down"></i>
+                <i
+                  class="search__frame-select-icon fa-solid fa-chevron-down"
+                ></i>
 
                 <ul class="search__select-option">
-
-                  <li class="search__select-option-item search__select-option-item--active">
+                  <li
+                    class="search__select-option-item search__select-option-item--active"
+                  >
                     <span>Trong Shop</span>
                     <i class="fa-solid fa-check"></i>
                   </li>
@@ -189,20 +225,27 @@
                     <span>Ngoài Shop</span>
                     <i class="fa-solid fa-check"></i>
                   </li>
-
                 </ul>
               </div>
 
               <button class="search__frame-btn">
-                <i class="search__frame-btn-icon fa-solid fa-magnifying-glass"></i>
+                <i
+                  class="search__frame-btn-icon fa-solid fa-magnifying-glass"
+                ></i>
               </button>
-
             </div>
-            
+
+            <!-- CART LAYOUT -->
             <div class="search__cart">
-              <i class="search__cart-icon fa-solid fa-cart-shopping"></i>
+              <div class="search__cart-wrap">
+                <i class="search__cart-icon fa-solid fa-cart-shopping"></i>
+                <div class="search__cart-list search__cart-list--no-cart">
+                  <img src="./assets/img/lvnh.png" alt="" class="search__cart-no-cart-img">
+                  <span class="search__cart-list--no-cart-msg">Chưa có sản phẩm</span>
+                </div>
+              </div>
+              
             </div>
-
           </div>
         </div>
       </header>
